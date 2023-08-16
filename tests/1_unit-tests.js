@@ -79,7 +79,7 @@ suite("Unit Tests", () => {
         "No Mr. Bond, I expect you to die.",
         "american-to-british"
       ),
-      "No Mr Bond, I expect you do die."
+      "No Mr Bond, I expect you to die."
     );
   });
   // Translate Dr. Grosh will see you now. to British English
@@ -173,7 +173,7 @@ suite("Unit Tests", () => {
   test("Translate Have you met Mrs Kalyani? to American English", () => {
     assert.equal(
       translator.translate("Have you met Mrs Kalyani?", "british-to-american"),
-      "Have you met Mrs Kalyani?"
+      "Have you met Mrs. Kalyani?"
     );
   });
   // Translate Prof Joyner of King's College, London. to American English
@@ -226,7 +226,7 @@ suite("Unit Tests", () => {
         "british-to-american",
         { highlight: true }
       ),
-      "We watched the <span class='highlight'>soccer</span> match for a while."
+      'We watched the <span class="highlight">soccer</span> match for a while.'
     );
   });
   // Highlight translation in Paracetamol takes up to an hour to work.
@@ -237,7 +237,7 @@ suite("Unit Tests", () => {
         "british-to-american",
         { highlight: true }
       ),
-      "<span class='highlight'>Tylenol</span> takes up to an hour to work."
+      '<span class="highlight">Tylenol</span> takes up to an hour to work.'
     );
   });
 });
