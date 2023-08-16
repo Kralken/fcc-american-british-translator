@@ -24,7 +24,7 @@ suite("Functional Tests", () => {
         assert.equal(res.status, 200, "correct status code");
         assert.equal(
           res.body.translation,
-          "We had a party at my friend's <span class='highlight'>flat</span>."
+          'We had a party at my friend\'s <span class="highlight">flat</span>.'
         );
         done();
       });
@@ -82,7 +82,7 @@ suite("Functional Tests", () => {
       .end((err, res) => {
         assert.equal(res.status, 200, "correct status code.");
         assert.equal(
-          res.status.error,
+          res.body.error,
           "Required field(s) missing",
           "correct error text"
         );
@@ -135,6 +135,7 @@ suite("Functional Tests", () => {
           "Everything looks good to me!",
           "correct translation text"
         );
+        done();
       });
   });
 });
