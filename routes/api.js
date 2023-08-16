@@ -26,9 +26,14 @@ module.exports = function (app) {
         highlight: true,
       });
       if (translation != req.body.text) {
-        res.status(200).json({ translation: translation });
+        res.status(200).json({ translation: translation, text: req.body.text });
       } else {
-        res.status(200).json({ translation: "Everything looks good to me!" });
+        res
+          .status(200)
+          .json({
+            translation: "Everything looks good to me!",
+            text: req.body.text,
+          });
       }
     } catch (e) {
       if (e instanceof InputError) {
