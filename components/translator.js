@@ -61,6 +61,10 @@ class Translator {
           ? timeStamp.replace(":", ".")
           : timeStamp.replace(".", ":");
 
+        highlight
+          ? (replacement = '<span class="highlight">' + replacement + "</span>")
+          : null;
+
         newText = newText.replace(timeStamp, replacement);
       }
     }
